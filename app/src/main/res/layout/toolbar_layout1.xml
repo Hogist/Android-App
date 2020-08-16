@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/imageButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginRight="30dp"-->
+<!--        android:background="#FF0000"-->
+<!--        android:gravity="left"-->
+<!--        android:src="@drawable/abc_vector_test"/>-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Login / Signup"
+        android:layout_marginRight="50dp"
+        android:gravity ="center"
+        android:id="@+id/toolbar_title"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"/>
+
+
+</androidx.appcompat.widget.Toolbar>

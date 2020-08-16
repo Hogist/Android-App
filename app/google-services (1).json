@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "851087470299",
+    "firebase_url": "https://hogist-55e4e.firebaseio.com",
+    "project_id": "hogist-55e4e",
+    "storage_bucket": "hogist-55e4e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:851087470299:android:a8444ae3f8cba7c91926fe",
+        "android_client_info": {
+          "package_name": "com.example.hogist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "851087470299-bhj2vsfps4jr6tl2slnhr4anv9rvc1fl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf4VixgNBWQlK3ZXxj4_0_Ew64sui5Ckg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "851087470299-bhj2vsfps4jr6tl2slnhr4anv9rvc1fl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
