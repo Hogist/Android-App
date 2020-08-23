@@ -132,7 +132,7 @@
 
             <LinearLayout
                 android:layout_width="433dp"
-                android:layout_height="156dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
                 android:orientation="horizontal">
@@ -161,10 +161,20 @@
                     android:elevation="50dp"
                     android:text="View Enterprise "
                     android:textColor="#FFFFFF" />
+
             </LinearLayout>
+            <Button
+                android:id="@+id/tagMenuEnterprise"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:background="#FF0000"
+                android:elevation="50dp"
+                android:text="TagMenu"
+                android:textColor="#FFFFFF" />
 
         </LinearLayout>
-
 
 
     </LinearLayout>

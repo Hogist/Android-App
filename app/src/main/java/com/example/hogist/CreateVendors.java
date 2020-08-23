@@ -78,7 +78,9 @@ public class CreateVendors extends AppCompatActivity {
         tagmenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                final String vemailaddress =VEmailAddress .getText().toString().trim();
                 Intent i = new Intent(CreateVendors.this, Menudetails.class);
+                i.putExtra("VendorEmailID",vemailaddress);
                 startActivity(i);
 
 
@@ -87,7 +89,9 @@ public class CreateVendors extends AppCompatActivity {
         tagenterprise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                final String vemailaddress =VEmailAddress .getText().toString().trim();
                 Intent e = new Intent(CreateVendors.this,ViewEnterpriseActivity.class);
+                e.putExtra("VendorEmailID",vemailaddress);
                 startActivity(e);
             }
         });

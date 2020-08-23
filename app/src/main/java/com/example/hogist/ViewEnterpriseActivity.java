@@ -1,6 +1,7 @@
 package com.example.hogist;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -167,6 +168,8 @@ public class ViewEnterpriseActivity extends AppCompatActivity {
             TagEnterpriseID++;
             String tagEnterpriseID = TagEnterpriseID.toString();
             String vendorID = VendorID.toString();
+            Intent intent = getIntent();
+            String vendorEmailID = intent.getStringExtra("VendorEmailID");
             Toast.makeText(context,id,Toast.LENGTH_SHORT).show();
             DocumentReference tagEnterpriseRef = db.collection("VendorTagEnterprise").document();
             Map<String,Object> tagenterprise = new HashMap<>();
@@ -174,6 +177,7 @@ public class ViewEnterpriseActivity extends AppCompatActivity {
             tagenterprise.put("VTagEnterpriseID",tagEnterpriseID);
             tagenterprise.put("VUserID",vendorID);
             tagenterprise.put("EnterpriseID",id);
+            tagenterprise.put("VendorEmailID",vendorEmailID);
             tagEnterpriseRef.set(tagenterprise).addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void aVoid) {

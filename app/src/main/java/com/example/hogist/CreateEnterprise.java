@@ -30,7 +30,7 @@ import java.util.Map;
 
 public class CreateEnterprise extends AppCompatActivity {
     public static final String TAG = "TAG";
-Button submit,viewenterprise;
+Button submit,viewenterprise,tagMenu;
 EditText EFullName,EMobileNumber,EEmailAddress,ECompanyName,EPassword,EAddress;
     FirebaseFirestore fstore;
     FirebaseAuth fAuth;
@@ -50,6 +50,7 @@ EditText EFullName,EMobileNumber,EEmailAddress,ECompanyName,EPassword,EAddress;
         EAddress=findViewById(R.id.address);
         submit=findViewById(R.id.submit);
         viewenterprise=findViewById(R.id.viewenterprise);
+        tagMenu = findViewById(R.id.tagMenuEnterprise);
         fstore = FirebaseFirestore.getInstance();
         fAuth = FirebaseAuth.getInstance();
 
@@ -78,6 +79,16 @@ EditText EFullName,EMobileNumber,EEmailAddress,ECompanyName,EPassword,EAddress;
 
                 Intent i=new Intent(CreateEnterprise.this,ViewEnterpriseActivity.class);
                 startActivity(i);
+            }
+        });
+
+        tagMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final String eemailadsress = EEmailAddress.getText().toString().trim();
+//                Intent i=new Intent(CreateEnterprise.this,Menudetails.class);
+//                i.putExtra("EEmailID",eemailadsress);
+//                startActivity(i);
             }
         });
 

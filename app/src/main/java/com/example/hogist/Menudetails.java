@@ -1,6 +1,7 @@
 package com.example.hogist;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -315,6 +316,8 @@ public class Menudetails extends AppCompatActivity {
             tagMenuIdRef.update("tagmenu_counter", FieldValue.increment(1));
             VendorTagMenuID++;
             DocumentReference tagMenuRef = firestore.collection("VendorTagMenu").document();
+            Intent intent = getIntent();
+            String vendorEmailID = intent.getStringExtra("VendorEmailID");
             String vendorTagMenuID = VendorTagMenuID.toString();
             String vendorID = VendorID.toString();
             Map<String,Object> tagmenu = new HashMap<>();
@@ -322,6 +325,7 @@ public class Menudetails extends AppCompatActivity {
             tagmenu.put("VTagMenuID",vendorTagMenuID);
             tagmenu.put("VUserID",vendorID);
             tagmenu.put("MenuID",id);
+            tagmenu.put("VendorEmailID",vendorEmailID);
             tagMenuRef.set(tagmenu).addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void aVoid) {
