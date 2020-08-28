@@ -99,6 +99,7 @@
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:layout_width="320dp"
+            android:id="@+id/covid"
             android:layout_height="70dp"
             android:layout_gravity="center"
             app:cardElevation="20dp"
@@ -106,7 +107,7 @@
             android:layout_marginTop="13dp">
 
             <TextView
-                android:id="@+id/textView5"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,9 +22,10 @@ public class Operation extends AppCompatActivity {
     private TextView CancelOrderRequest;
     FirebaseFirestore fstore;
     FirebaseAuth fAuth;
-    CardView menuchange, cancelrequest, createMenu;
+    CardView menuchange, cancelrequest, createMenu,CovidHygenicChek,Manageorder;
     ImageView logout;
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +36,7 @@ public class Operation extends AppCompatActivity {
         logout = findViewById(R.id.logout);
         menuchange = findViewById(R.id.menuchangerequestcw);
         cancelrequest = findViewById(R.id.cancelrequestcw);
+       CovidHygenicChek=findViewById(R.id.covid);
         fstore = FirebaseFirestore.getInstance();
         fAuth = FirebaseAuth.getInstance();
         logout.setOnClickListener(new View.OnClickListener() {
@@ -100,6 +103,12 @@ public class Operation extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(Operation.this, CancelRequestDetails.class);
                 startActivity(i);
+            }
+        });
+        CovidHygenicChek.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
 
